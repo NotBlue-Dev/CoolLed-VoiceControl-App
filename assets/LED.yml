@@ -1,0 +1,104 @@
+context:
+  expressions:
+    State:
+      - $etat:etat [les, la] @led
+    Image:
+      - "@affiche (image) $image:image"
+      - "@affiche (image) $image:image (sur) [les, la] @led"
+      - "@affiche $image:image (sur) [les, la] @led"
+    Brightness:
+      - Luminosité $pourcent:pourcent (pourcent) (sur) [la, les] @led
+      - Luminosité $pourcent:pourcent (pourcent)
+      - Luminosité $pourcent:pourcent (sur) [la, les] @led
+      - Luminosité $pourcent:pourcent
+    Speed:
+      - Vitesse $pourcent:pourcent (pourcent)
+      - Vitesse $pourcent:pourcent (pourcent) (sur) [la, les] @led
+      - Vitesse $pourcent:pourcent (sur) [la, les] @led
+      - Vitesse $pourcent:pourcent
+    Mode:
+      - "@changez (l') image en mode $mode:mode"
+      - "@changez en mode $mode:mode"
+      - "@changez (l') animation en (mode) $mode:mode"
+      - "@changez (l') animation en (mode) $mode:mode (sur) [la, les] @led"
+    Write:
+      - écris en $couleur:couleur
+      - écris du texte en $couleur:couleur
+      - écris
+      - écris du texte
+    Anim:
+      - "@affiche (animation) $anim:anim"
+      - "@affiche (animation) $anim:anim (sur) [les, la] @led"
+      - "@affiche $anim:anim (sur) [les, la] @led"
+    API:
+      - "@affiche $API:API (sur) [les, la] @led"
+      - "@affiche (API) $API:API"
+      - "@affiche (API) $API:API (sur) [les, la] @led"
+  slots:
+    couleur:
+      - vert clair
+      - bleu clair
+      - bleu
+      - vert
+      - orange
+      - rose
+      - violet
+      - rouge
+      - blanc
+      - jaune
+    image:
+      - Jeux vidéos
+      - instagram
+      - coeur
+      - smiley lunette
+      - smiley coeur
+      - vitesse
+    mode:
+      - laser
+      - image
+      - flocon
+      - bas
+      - haut
+      - droite
+      - gauche
+      - statique
+    pourcent:
+      - cent
+      - quatre vingt dix
+      - quatre vingt
+      - soixante dix
+      - soixante
+      - cinquante
+      - quarante
+      - trente
+      - vingt
+      - dix
+    etat:
+      - éteindre
+      - éteint
+      - allume
+      - allumez
+    anim:
+      - formule un
+      - yeux
+      - dino
+      - bloc
+      - kebab
+      - turbo
+      - wanted
+      - course
+    API:
+      - gps
+      - musique
+  macros:
+    changez:
+      - changez
+      - change
+      - mets
+      - mettez
+    led:
+      - lumières
+      - led
+    affiche:
+      - affiche
+      - afficher
